@@ -1,0 +1,275 @@
+:root {
+  --primary-bg-color: #001f33;   /* navy */
+  --text-color: #e0f7fa;         /* aqua text */
+  --main-bg-color: #00334d;      /* deep teal */
+  --main-text-color: #ffffff;
+  --main-btn-bg-color: #005f73;  /* sea green */
+  --accent-color: #00bcd4;       /* bright cyan */
+}
+
+
+
+
+body,
+h1,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #0f3460, #1a1a2e);
+  color: var(--text-color);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  padding: 10px;
+}
+
+header {
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  padding: 10px 0;
+  text-align: center;
+  width: 100%;
+}
+
+nav {
+  margin-top: 20px;
+  text-align: center;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+/* Layout for player and playlist side by side */
+.player-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.media-player {
+  flex: 2;
+  position: relative;
+  background: #000;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.media-player video {
+  width: 100%;
+  display: block;
+}
+
+.custom-controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 10px;
+  width: 100%;
+}
+
+.custom-controls button {
+  background-color: var(--main-btn-bg-color);
+  color: var(--main-text-color);
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.custom-controls button:hover {
+  background: var(--accent-color);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background-color: #ddd;
+  margin: 0 10px;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+.progress-bar {
+  flex: 1;
+  height: 8px;
+  background-color: #ddd;
+  margin: 0 10px;
+  border-radius: 4px;
+  position: relative;
+  cursor: pointer;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  background-color: var(--accent-color);
+  width: 0;
+  transition: width 0.1s linear;
+}
+/* Playlist styles */
+.playlist-panel {
+  flex: 1;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.playlist-panel h2 {
+  margin-bottom: 10px;
+}
+
+.playlist-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.playlist-panel li {
+  padding: 8px;
+  margin-bottom: 6px;
+  background: var(--main-btn-bg-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.playlist-panel li:hover {
+  background: var(--accent-color);
+}
+
+.playlist-panel li.active {
+  background: var(--accent-color);
+  font-weight: bold;
+}
+
+footer {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  margin-top: 20px;
+}
+/* Playlist styles */
+.playlist-panel {
+  flex: 1;
+  background: var(--main-bg-color);
+  color: var(--main-text-color);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.playlist-panel h2 {
+  margin-bottom: 10px;
+}
+
+.playlist-panel ul {
+  list-style: none;
+  padding: 0;
+}
+
+.playlist-panel li {
+  padding: 8px;
+  margin-bottom: 6px;
+  background: var(--main-btn-bg-color);
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.playlist-panel li:hover {
+  background: var(--accent-color);
+}
+
+.playlist-panel li.active {
+  background: var(--accent-color);
+  font-weight: bold;
+}
+
+/* Comment section styling */
+.comments {
+  margin-top: 30px;
+  background: var(--main-bg-color);
+  padding: 15px;
+  border-radius: 10px;
+}
+
+.comments h2 {
+  margin-bottom: 10px;
+}
+
+#comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#comment-form input,
+#comment-form textarea {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #444;
+  background: var(--main-btn-bg-color);
+  color: var(--main-text-color);
+}
+
+#comment-form textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+#comment-form button {
+  align-self: flex-end;
+  padding: 6px 14px;
+  background: var(--accent-color);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+#comment-form button:hover {
+  background: #ff6b81;
+}
+
+#comment-list {
+  margin-top: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+#comment-list li {
+  padding: 8px;
+  margin-bottom: 6px;
+  background: var(--main-btn-bg-color);
+  border-radius: 6px;
+}
